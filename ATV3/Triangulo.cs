@@ -14,8 +14,6 @@ namespace ATV3
         Escaleno,
         Equilatero
     }
-    internal class Triangulo
-    {
 
         private Vertice _v1, _v2, _v3;
 
