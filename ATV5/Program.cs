@@ -6,8 +6,8 @@ namespace ATV5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("helo word");
+            Console.WriteLine("hello word");
 
         }
     }
-}a
+}
