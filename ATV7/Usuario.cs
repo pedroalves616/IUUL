@@ -16,4 +16,19 @@ namespace ATV7
         public int Depedentes { get; private set; }
 
     }
+
+    private  String ConverterNome(String nome)
+    {
+
+        while(nome.Length < 5)
+            {
+            Console.WriteLine("Favor, inserir nome de pelo menos 5 caracteres: ");
+            nome = Console.ReadLine();
+        }
+        return nome;
+    }
+
+
+
 }
+//referencia https://www.caelum.com.br/apostila/apostila-csharp-orientacao-objetos.pdf
