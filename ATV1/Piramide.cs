@@ -10,33 +10,45 @@ namespace ATV1
     {
         private int n;
 
+        public  int N
+        { 
+            get { return n; }
+            set
+            {
+                if  (value <=0)
+                    throw new ArgumentOutOfRangeException("valor menor que 1");
+                n = value;
+            }
+    
+        
+        }
+        
         public Piramide(int n)
         {
-            inicializar(n);
+            this.N = n;
         }
 
         public void Desenha()
         {
             int n = this.n;
-            int espaco = 50;
+         
 
-            for (int i = 0; i <= n; i++)
+            for (int i = 1; i <= N; i++)
             {
-                for (int j = i - espaco; j < i; j++)
-                {
-                    if (j > 0) Console.Write(j);
-                    else Console.Write(" ");
-                }
-                for (int j = i; j >= 1; j--) { Console.Write(j); }
+                for (int j = 0 ; j < N-i; j++)
+                    Console.Write(' ');
+
+                for (int j = 1; j <=  i; j++)
+                    Console.Write(j);
+
+                for (int j = i-1; j >= 1; j--)  
+                    Console.Write(j);  
+
                 Console.WriteLine();
             }
         }
 
-        public void inicializar(int n)
-        {
-            if (n > 0) { this.n = n; }
-            else throw new Exception("N não pode ser menor que 1");
-        }
+      
 
     }
 }

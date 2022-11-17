@@ -8,12 +8,15 @@ using ATV2;
 
 namespace ATV3
 {
-    public enum TiposTriangulo
+
+    public class Triangulo
     {
-        Isoseles,
-        Escaleno,
-        Equilatero
-    }
+        public enum TiposTriangulo
+        {
+            Isoseles,
+            Escaleno,
+            Equilatero
+        }
 
         private Vertice _v1, _v2, _v3;
 
@@ -54,7 +57,7 @@ namespace ATV3
             get
             {
                 if (A == B && B == C) return TiposTriangulo.Equilatero;
-                else if (A == B || B == C || C == A) return TiposTriangulo.Isoseles;
+                if (A == B || B == C || C == A) return TiposTriangulo.Isoseles;
                 else return TiposTriangulo.Escaleno;
             }
         }
@@ -65,8 +68,9 @@ namespace ATV3
             _v3 = v3;
 
             verificarTriangulo();
+            
         }
-        public bool EIgual(Triangulo trianguloB)
+        public bool Igual(Triangulo trianguloB)
         {
             if (_v1.Igual(trianguloB.V1) && _v2.Igual(trianguloB.V2) && _v3.Igual(trianguloB.V3)) return true;
             return false;
@@ -76,7 +80,10 @@ namespace ATV3
             if (!(A < B + C) || !(B < A + C) || !(C < A + B))
             {
                 throw new Exception("Não forma um triângulo");
+             
             }
+    
+
         }
 
 

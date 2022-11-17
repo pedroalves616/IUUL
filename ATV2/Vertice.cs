@@ -31,14 +31,12 @@ namespace ATV2
 
         public double Distancia(Vertice ponto)
         {
-            double xa, xb, d;
 
-            xa = Math.Pow(ponto.X - this.X, 2);
-            xb = Math.Pow(ponto.Y - this.Y, 2);
+            double xa = Math.Pow(ponto.X - this.X, 2);
+            double xb = Math.Pow(ponto.Y - this.Y, 2);
 
-            d = Math.Sqrt(xa + xb);
 
-            return d;
+            return Math.Sqrt(xa + xb); ;
         }
 
         public bool Igual(Vertice ponto)

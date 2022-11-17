@@ -6,7 +6,7 @@ namespace ATV1
     {
         static void Main(string[] args)
         {
-            Piramide p = new Piramide(4);
+            Piramide p = new Piramide(10);
 
             p.Desenha();
         }
